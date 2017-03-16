@@ -1,0 +1,82 @@
+[32m[0315 20:16:54 @logger.py:69][0m Argv: DQN.py --rom breakout.bin
+[32m[0315 20:16:55 @expreplay.py:144][0m Number of Legal actions: 4
+[32m[0315 20:16:55 @gpu.py:32][0m Loading local devices by TensorFlow ...
+[32m[0315 20:16:55 @common.py:102][0m conv0 input: [None, 84, 84, 4]
+[32m[0315 20:16:55 @common.py:110][0m conv0 output: [None, 84, 84, 32]
+[32m[0315 20:16:55 @common.py:102][0m pool0 input: [None, 84, 84, 32]
+[32m[0315 20:16:55 @common.py:110][0m pool0 output: [None, 42, 42, 32]
+[32m[0315 20:16:55 @common.py:102][0m conv1 input: [None, 42, 42, 32]
+[32m[0315 20:16:55 @common.py:110][0m conv1 output: [None, 42, 42, 32]
+[32m[0315 20:16:55 @common.py:102][0m pool1 input: [None, 42, 42, 32]
+[32m[0315 20:16:55 @common.py:110][0m pool1 output: [None, 21, 21, 32]
+[32m[0315 20:16:55 @common.py:102][0m conv2 input: [None, 21, 21, 32]
+[32m[0315 20:16:55 @common.py:110][0m conv2 output: [None, 21, 21, 64]
+[32m[0315 20:16:55 @common.py:102][0m pool2 input: [None, 21, 21, 64]
+[32m[0315 20:16:55 @common.py:110][0m pool2 output: [None, 10, 10, 64]
+[32m[0315 20:16:55 @common.py:102][0m conv3 input: [None, 10, 10, 64]
+[32m[0315 20:16:55 @common.py:110][0m conv3 output: [None, 10, 10, 64]
+[32m[0315 20:16:55 @common.py:102][0m fc0 input: [None, 10, 10, 64]
+[32m[0315 20:16:55 @common.py:110][0m fc0 output: [None, 512]
+[32m[0315 20:16:55 @common.py:102][0m fct input: [None, 512]
+[32m[0315 20:16:55 @common.py:110][0m fct output: [None, 4]
+[32m[0315 20:16:55 @common.py:102][0m target/conv0 input: [None, 84, 84, 4]
+[32m[0315 20:16:55 @common.py:110][0m target/conv0 output: [None, 84, 84, 32]
+[32m[0315 20:16:55 @common.py:102][0m target/pool0 input: [None, 84, 84, 32]
+[32m[0315 20:16:55 @common.py:110][0m target/pool0 output: [None, 42, 42, 32]
+[32m[0315 20:16:55 @common.py:102][0m target/conv1 input: [None, 42, 42, 32]
+[32m[0315 20:16:55 @common.py:110][0m target/conv1 output: [None, 42, 42, 32]
+[32m[0315 20:16:55 @common.py:102][0m target/pool1 input: [None, 42, 42, 32]
+[32m[0315 20:16:55 @common.py:110][0m target/pool1 output: [None, 21, 21, 32]
+[32m[0315 20:16:55 @common.py:102][0m target/conv2 input: [None, 21, 21, 32]
+[32m[0315 20:16:55 @common.py:110][0m target/conv2 output: [None, 21, 21, 64]
+[32m[0315 20:16:55 @common.py:102][0m target/pool2 input: [None, 21, 21, 64]
+[32m[0315 20:16:55 @common.py:110][0m target/pool2 output: [None, 10, 10, 64]
+[32m[0315 20:16:55 @common.py:102][0m target/conv3 input: [None, 10, 10, 64]
+[32m[0315 20:16:55 @common.py:110][0m target/conv3 output: [None, 10, 10, 64]
+[32m[0315 20:16:55 @common.py:102][0m target/fc0 input: [None, 10, 10, 64]
+[32m[0315 20:16:55 @common.py:110][0m target/fc0 output: [None, 512]
+[32m[0315 20:16:55 @common.py:102][0m target/fct input: [None, 512]
+[32m[0315 20:16:55 @common.py:110][0m target/fct output: [None, 4]
+[32m[0315 20:16:55 @modelutils.py:32][0m [36mModel Parameters: [0m
+conv0/W:0: shape=[5, 5, 4, 32], dim=3200
+conv0/b:0: shape=[32], dim=32
+conv0/alpha:0: shape=[], dim=1
+conv1/W:0: shape=[5, 5, 32, 32], dim=25600
+conv1/b:0: shape=[32], dim=32
+conv1/alpha:0: shape=[], dim=1
+conv2/W:0: shape=[4, 4, 32, 64], dim=32768
+conv2/b:0: shape=[64], dim=64
+conv2/alpha:0: shape=[], dim=1
+conv3/W:0: shape=[3, 3, 64, 64], dim=36864
+conv3/b:0: shape=[64], dim=64
+conv3/alpha:0: shape=[], dim=1
+fc0/W:0: shape=[6400, 512], dim=3276800
+fc0/b:0: shape=[512], dim=512
+fct/W:0: shape=[512, 4], dim=2048
+fct/b:0: shape=[4], dim=4
+[36mTotal #param=3377992 (12.89 MB assuming all float32)[0m
+[32m[0315 20:16:55 @base.py:110][0m Setup monitors ...
+[32m[0315 20:16:56 @base.py:114][0m Setup callbacks graph ...
+[32m[0315 20:16:56 @DQN.py:182][0m target/conv0/W <- conv0/W
+[32m[0315 20:16:56 @DQN.py:182][0m target/conv0/b <- conv0/b
+[32m[0315 20:16:56 @DQN.py:182][0m target/conv0/alpha <- conv0/alpha
+[32m[0315 20:16:56 @DQN.py:182][0m target/conv1/W <- conv1/W
+[32m[0315 20:16:56 @DQN.py:182][0m target/conv1/b <- conv1/b
+[32m[0315 20:16:56 @DQN.py:182][0m target/conv1/alpha <- conv1/alpha
+[32m[0315 20:16:56 @DQN.py:182][0m target/conv2/W <- conv2/W
+[32m[0315 20:16:56 @DQN.py:182][0m target/conv2/b <- conv2/b
+[32m[0315 20:16:56 @DQN.py:182][0m target/conv2/alpha <- conv2/alpha
+[32m[0315 20:16:56 @DQN.py:182][0m target/conv3/W <- conv3/W
+[32m[0315 20:16:56 @DQN.py:182][0m target/conv3/b <- conv3/b
+[32m[0315 20:16:56 @DQN.py:182][0m target/conv3/alpha <- conv3/alpha
+[32m[0315 20:16:56 @DQN.py:182][0m target/fc0/W <- fc0/W
+[32m[0315 20:16:56 @DQN.py:182][0m target/fc0/b <- fc0/b
+[32m[0315 20:16:56 @DQN.py:182][0m target/fct/W <- fct/W
+[32m[0315 20:16:56 @DQN.py:182][0m target/fct/b <- fct/b
+[32m[0315 20:16:56 @base.py:187][0m Building predictor graph towerp0 on gpu=0 ...
+[32m[0315 20:16:56 @base.py:127][0m Finalize the graph, create the session ...
+[32m[0315 20:16:56 @base.py:121][0m Graph variables initialized.
+[32m[0315 20:16:57 @expreplay.py:166][0m Populating replay memory with epsilon=1 ...
+[32m[0315 20:17:50 @concurrency.py:36][0m Starting EnqueueThread ...
+[32m[0315 20:17:50 @base.py:160][0m Start Epoch 1 ...
+[32m[0315 20:18:15 @base.py:177][0m Detected Ctrl-C and exiting main loop.
