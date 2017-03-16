@@ -24,7 +24,7 @@ module load python2
 
 # switch to pylon1
 # NOTE: Files in this directory are deleted when 30 days old
-pushd $PYLON1
+#pushd $PYLON1
 
 # turn on the virtualenv
 source /home/shivangs/virtualenv-15.1.0/myVE/bin/activate
