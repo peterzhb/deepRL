@@ -27,10 +27,10 @@ module load python2
 pushd $PYLON1
 
 # turn on the virtualenv
-source $PYLON2/my-virtualenv/bin/activate
+source /home/shivangs/virtualenv-15.1.0/myVE/bin/activate
 
 # run the experiment script
-python $PYLON2/deeprl_hw2/dqn_atari.py --env Breakout-v0
+python /home/shivangs/deepRL/examples/DeepQNetwork/DQN.py
 
 # turn off the virtualenv
 deactivate
