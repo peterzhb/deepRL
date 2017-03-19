@@ -13,14 +13,14 @@ set -u  # throw an error if unset variable referenced
 set -e  # exit on error
 
 # helper vars
-PYLON1=/pylon1/$(id -gn)/$USER
-PYLON2=/pylon2/$(id -gn)/$USER
+PYLON1=/pylon1/$(id -gn)/shivangs
+PYLON5=/pylon5/$(id -gn)/shivangs
 
 module load cuda/8.0
 
 # select which python module you want 2/3
-#module load python3
-module load python2
+module load python3
+#module load python2
 
 # switch to pylon1
 # NOTE: Files in this directory are deleted when 30 days old
@@ -30,7 +30,7 @@ module load python2
 source /home/shivangs/virtualenv-15.1.0/myVE/bin/activate
 
 # run the experiment script
-python /home/shivangs/deepRL/examples/DeepQNetwork/DQN.py
+python /PYLON5/test.py
 
 # turn off the virtualenv
 deactivate
