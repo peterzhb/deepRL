@@ -26,10 +26,10 @@ module load python3
 # NOTE: Files in this directory are deleted when 30 days old
 pushd $PYLON5
 virtualenv myVE
-cd myVE
+
 # turn on the virtualenv
 source $PYLON5/myVE/bin/activate
-
+cd $PYLON5/deepRL/
 pip install -r requirements.txt
 # run the experiment script
 
