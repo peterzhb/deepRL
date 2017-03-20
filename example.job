@@ -14,23 +14,24 @@ set -e  # exit on error
 
 # helper vars
 PYLON1=/pylon1/$(id -gn)/$USER
-PYLON2=/pylon2/$(id -gn)/$USER
+PYLON5=/pylon5/$(id -gn)/$USER
 
 module load cuda/8.0
 
 # select which python module you want 2/3
 #module load python3
-module load python2
+module load python3
 
 # switch to pylon1
 # NOTE: Files in this directory are deleted when 30 days old
-pushd $PYLON1
-
+pushd $PYLON5
+virtualenv myVE
+cd myVE
 # turn on the virtualenv
-source $PYLON2/my-virtualenv/bin/activate
+source $PYLON5/myVE/bin/activate
 
+pip install -r requirements.txt
 # run the experiment script
-python $PYLON2/deeprl_hw2/dqn_atari.py --env Breakout-v0
 
 # turn off the virtualenv
 deactivate
