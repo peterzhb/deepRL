@@ -13,8 +13,9 @@ set -u  # throw an error if unset variable referenced
 set -e  # exit on error
 
 # helper vars
-PYLON1=/pylon1/$(id -gn)/$USER
-PYLON5=/pylon5/$(id -gn)/$USER
+PYLON1=/pylon1/ci560ip/shivangs/deepRL
+PYLON5=/pylon5/ci560ip/shivangs/deepRL
+
 
 module load cuda/8.0
 
@@ -29,7 +30,7 @@ virtualenv myVE
 
 # turn on the virtualenv
 source $PYLON5/myVE/bin/activate
-cd $PYLON5/deepRL/
+
 pip install -r requirements.txt
 # run the experiment script
 
